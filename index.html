@@ -27,6 +27,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-C058EBDNS0');
+
+  document.getElementById("register-button").addEventListener("click", function() {
+    gtag("event", "register_click", {
+        event_category: "engagement",
+        event_label: "Register Button",
+    });
+    alert("Event Registered");
+});
+
 </script>
 </head>
 <body>
@@ -38,7 +47,7 @@
         <input type ="email" placeholder="Enter your Email"><br><br>
         <lable>Phone</lable>
         <input type="contect" placeholder="Enter phone number"><br><br>
-        <button>register</button>
+        <button id="register_button">register</button>
         </div>
 </body>
 </html>
