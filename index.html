@@ -41,14 +41,16 @@
         <input type="contect" placeholder="Enter phone number"><br><br>
         <button id="register_button">register</button>
         </div>
+        <script>
+        document.getElementById("register-button").addEventListener("click", function() {
+            gtag("event", "register_click", {
+                event_category: "engagement",
+                event_label: "Register Button",
+            });
+            alert("Event Registered");
+        });
+        </script>
 </body>
-<script>
-     document.getElementById("register-button").addEventListener("click", function() {
-    gtag("event", "register_click", {
-        event_category: "engagement",
-        event_label: "Register Button",
-    });
-    alert("Event Registered");
-});
-</script>
+
+
 </html>
